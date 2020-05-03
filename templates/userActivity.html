@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user activity</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>User Id</th>
+    <th>Name</th>
+    <th>TimeZone</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+  </tr>
+    {% for item in data %}
+     <tr>
+    <th>{{ item.user_id.user_id }}</th>
+    <th>{{ item.user_id.name }}</th>
+    <th>{{ item.user_id.tz }}</th>
+    <th>{{ item.start_time }} </th>
+    <th>{{ item.end_time }} </th>
+  </tr>
+    {% endfor %}
+</table>
+</body>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</html>
